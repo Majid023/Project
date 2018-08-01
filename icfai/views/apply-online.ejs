@@ -1,0 +1,39 @@
+<br>
+</br>
+<div class='row  text-primary '>
+    <div class="col-lg-4 offset-lg-4 col-sm-4 offset-sm-4">
+       <form action="/apply-online/submit" method="post">
+            <div class="form-group">
+                <label for="nameid">Name</label>
+                <input name="name"type="text" class="form-control" id="nameid" aria-describedby="emailHelp" required="required" placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="mobileid">Mobile No.</label>
+                <input name="mb"type="tel"  pattern="[0-9]{10}" required="required" class="form-control" id="mobileId" aria-describedby="emailHelp" placeholder="Enter Mobile Number">
+               
+            </div>
+            <div class="form-group">
+                <label for="cityid">City/Town</label>
+                <input name="city"required="required" type="text" class="form-control" id="cityid" aria-describedby="emailHelp" placeholder="Enter City/Town Name">
+                
+            </div>
+            <label for="programeid">Select Programe</label>
+            <div class="form-group">
+            <select class="form-control" id="programeid" name="programe" >
+              <option value="bba">BBA</option>
+              <option value="bca">BCA</option>
+              <option value="mba">MBA</option>
+              <option value="mca">MCA</option>
+              <option value="diploma">Diploma</option>
+            </select>
+          </div>
+        
+            <div class="form-group">
+                <label for="emailid">Email</label>
+                <input name="email" type="email" required="required" class="form-control" id="emailid" placeholder="Enter Email">
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+            <br>
+        </form>
+    </div>
+</div>

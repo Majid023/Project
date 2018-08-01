@@ -7,88 +7,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!--
-        Stylesheets and Preprocessors
-        ==============================
-
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
-
     <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap4.1.3.min.css">
+    <link rel="stylesheet" href="/styles/custom.css">
+    <link rel="stylesheet" href="/styles/customflickity.css">
+    <link rel="stylesheet" href="/styles/flickity.css">
     <link rel="stylesheet" href="/styles/importer.css">
     <!--STYLES END-->
   </head>
 
   <body>
-    <%- body %>
+    <nav  style="box-shadow:0px 2px 8px 0px rgba(255,0,0,0.8)"class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="/"><img id="icfai--logo" src="/images/circle-logo.png" class="rounded-circle" alt="Cinque Terre" width="100" height="50"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size:25px">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/apply-online">Apply Online</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Menu
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/bca">Result</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/programs">Programs</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Academics</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Corporate Relations</a>         
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Placements</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Distinguished Alumni</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Research & Publications</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="" method="get">
+      <input class="form-control mr-sm-2" name="val" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<br>
 
 
 
-    <!--
-        Client-side Templates
-        ========================
 
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
+<div class="carousel" data-flickity='{ "autoPlay":1500,"fullscreen": true, "lazyLoad": 2 }'>
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img1.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img2.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img3.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img1.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img2.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img3.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img1.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img2.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img3.jpg" />
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img1.jpg"/>
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img2.jpg"/>
+    <img class="carousel-image"
+      data-flickity-lazyload="/images/img3.jpg"/>
+</div>
 
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
-
-    <!--TEMPLATES-->
-    
-    <!--TEMPLATES END-->
 
 
-    <!--
 
-      Client-side Javascript
-      ========================
 
-      You can always bring in JS files manually with `script` tags, or asynchronously
-      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
-      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
 
-      By default, files in your `assets/js` folder are included here
-      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
-      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
-      and concatenated into a single file.
 
-      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-      For example, here are a few things you could do:
 
-          + Change the order of your scripts
-          + Import scripts from other directories
-          + Use a different preprocessor, like TypeScript
 
-    -->
+<br>
+
+
+
+    <div class="container-fluid">
+      <%- body %>
+    </div>
+    </br>
+
+  <div class="container-fluid">
+    <div class="footer">
+      <div class="row border">
+        <div class="col-lg-4" style="margin-top:5px">
+          <img src="/images/circle-logo.png" class="rounded-circle" alt="Cinque Terre" width="150" height="100"> 
+          <p class="text-justify"> The ICFAI University, Jharkhand was established under sub-Section (2) of Section 4 of the Institute of Chartered Financial Analysts of India University Act, 2006 (Jharkhand Act 08, 2007). The University is recognised by UGC under section 2(f) of UGC Act, 1956 and is empowered by UGC to award degrees under Section 22 of UGC Act, 1956. </p>
+        </div>
+        <div class="col-lg-4"  style="margin-top:5px">
+          <ul>
+            <a style="color:black" href="FAQs.html"><li> FAQs </li></a>
+            <a style="color:black" href="#"><li> RTI Act 2005 </li></a>
+            <a style="color:black" href="#"><li> Anti Ragging Policy </li></a>
+            <a style="color:black" href="#"><li> Policy Prohibiting Discrimination And Sexual Harassment </li></a>
+            <a style="color:black" href="#"><li>Student Code of Conduct </li></a>
+            <a style="color:black" href="#"><li> Careers @ IUJ </li></a>
+            <a style="color:black" href="#" target="_blank"><li> Employee Login </li></a>
+          </ul>
+          <br>
+        </div>
+        <div class="col-lg-4" style="margin-top:5px">
+        <iframe width="400" height="300" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d915.599333189697!2d85.23608729857561!3d23.373839081358575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4de596028435d%3A0x8f37589590d227a!2sICFAI+University%2C+Jharkhand!5e0!3m2!1sen!2sin!4v1518426438248" frameborder="0" allowfullscreen="" style="width:100%; height:250px"></iframe>
+        </div>
+      </div>
+      <div class="row bg-primary">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center bg6">
+          <p> © 2018 The ICFAI University Jharkhand. All Rights Reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!--SCRIPTS-->
     <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/flickity.js"></script>
+    <script src="/js/dependencies/jquery.js"></script>
+    <script src="/js/dependencies/popper.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!--SCRIPTS END-->
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/reload/reload.js"></script>
   </body>
 </html>

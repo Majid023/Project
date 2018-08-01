@@ -33,9 +33,28 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
-  }
+    view: 'index'
+  },
 
+  '/about':{
+    view: 'about'
+  },
+
+  '/login':{
+    view: 'login'
+  },
+
+  '/apply-online':{
+    view: 'apply-online'
+  },
+  
+  '/programs':{
+    view: 'programs'
+  },
+  
+  '/bca':{
+    view:"exam",
+  }
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

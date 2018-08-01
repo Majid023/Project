@@ -1,0 +1,102 @@
+<br>
+<div class="container">
+    <div class="container bg-dark ">
+        <div class="row" id="icfai-logo">
+            <div style="margin:0 auto;margin-top:5px">
+                <img width="150" height="60" class="wp-image-8022 alignleft" alt="" src="/images/logo.png">
+            </div>
+        </div>
+        <div class="row" id="icfai-title">
+            <h1 style="margin:0 auto" class="text-primary"><small><b> The Institute of Chartered Financial Analysts of India University</b></small></h1>
+        </div>
+        <div class="row"id="jh">
+            <div  class="text-secondary" style="margin:0 auto">
+                <h4><b>Jharkhand</b></h4>
+            </div>
+        </div>
+        <div class="row" id="grade">
+            <div  class="text-primary" style="margin:0 auto"><h1><small><b>GRADE SHEET</b></small></h1></div>
+        </div>
+                
+        <div class="row" style="color:white">
+            <div class="col-lg-5" style="margin-left:30px;border:1px solid black">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>ID No.</th>
+                            <td><%=uid%></td>
+                        </tr>
+                        <tr>
+                            <th>Name</th>
+                            <td><%=studentName%></td>
+                        </tr>
+                        <tr>
+                            <th >Academic Year</th>
+                            <td><%=year%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6 " style="margin-left:5px;border:1px solid black">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Program</th>
+                            <td><%=programe%></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Semester</th>
+                            <td><%=sem%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table table-bordered">
+                <thead class="bg-primary">
+                    <tr>
+                        <th scope="col">Course NO.</th>
+                        <th scope="col">Course Title</th>
+                        <th scope="col">Units</th>
+                        <th scope="col">Grade/Report</th>
+                    </tr>
+                </thead>
+                <tbody style="color:white">
+                    <% courses.forEach(function(course){%>
+        
+                    <tr>
+                        <th scope="row"><%=course.sno%></th>
+                        <td><%=course.title%></td>
+                        <td><%=course.unit%></td>
+                        <td><%=course.grade%></td>
+                    </tr>
+                    <%})%>
+                    <tr class="bg-primary">
+                        <th scope="row"></th>
+                        <td>Total Units</td>
+                        <td>18</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row" style="1px solid black">
+            <div class="col-lg-6" style="color:white">
+                <div class="row">
+                    <p><strong>Accumulated Units</strong> : <span style="color:black; font-size:25px">18</span></p>
+                </div>
+                <div class="row">
+                    <p><strong>Units used in calculating CGPA</strong> : <span style="color:black; font-size:25px">18</span></p>
+                </div>
+                <div class="row">
+                    <p><strong>CGPA</strong> : <span style="color:black; font-size:25px">8</span></p>
+                </div>
+                <div class="row">
+                    <p><strong>Date of Issue</strong> : <span style="color:black; font-size:25px">January 31, 2017</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
